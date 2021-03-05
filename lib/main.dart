@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'LessonBtn3.dart';
+import 'package:flutter_unity_app/Screens/Onboarding.dart';
 
 void main() => runApp(App());
 
@@ -31,10 +31,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Inspirit view'),
-      ),
-      body: Center(child: LessonBtn()),
+      // appBar: AppBar(
+      //   title: const Text('Inspirit view'),
+      // ),
+      body: Onboarding(),
     );
   }
 }
