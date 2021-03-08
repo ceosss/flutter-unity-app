@@ -11,6 +11,8 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return (IntroductionScreen(
+      animationDuration: 500,
+      curve: Curves.bounceInOut,
       pages: [
         onboardingCard(
           title:
