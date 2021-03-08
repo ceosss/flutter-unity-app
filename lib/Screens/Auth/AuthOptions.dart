@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_app/Components/Button.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AuthOptions extends StatelessWidget {
   @override
@@ -26,7 +27,13 @@ class AuthOptions extends StatelessWidget {
           children: [
             Text("Sign Up"),
             Text("Join the world of immersive experience"),
-            Button(),
+            Button(
+              text: "Sign in with Google",
+              icon: FontAwesomeIcons.google,
+              onPress: () {
+                print("Pressed");
+              },
+            ),
             Text("Or"),
             Text("Already have an account?")
           ],
