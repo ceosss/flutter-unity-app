@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_app/Screens/Auth/AuthOptions.dart';
+import 'package:flutter_unity_app/Screens/Auth/SignUpOptions.dart';
 
 void main() => runApp(App());
 
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: AuthOptions(),
+        body: SignUpOptions(),
       ),
     );
   }

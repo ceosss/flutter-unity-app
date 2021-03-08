@@ -4,11 +4,20 @@ class Button extends StatelessWidget {
   final String text;
   final IconData icon;
   final Function onPress;
-  Button({@required this.text, @required this.icon, @required this.onPress});
+  final Color color;
+  Button(
+      {@required this.text,
+      @required this.icon,
+      @required this.onPress,
+      @required this.color});
+
+  Color getPerfectColor() =>
+      color == Colors.black ? Colors.white : Colors.black;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(30),
+      margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(15), boxShadow: [
         BoxShadow(
@@ -22,18 +31,21 @@ class Button extends StatelessWidget {
           children: [
             Icon(
               icon,
-              color: Colors.black,
-              size: 32,
+              color: getPerfectColor(),
+              size: 30,
             ),
             Expanded(
                 child: Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: getPerfectColor()),
             ))
           ],
         ),
-        color: Colors.white,
+        color: color,
         splashColor: Color(0xff9E13E4).withOpacity(0.5),
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
