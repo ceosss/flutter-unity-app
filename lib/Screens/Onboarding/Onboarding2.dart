@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_app/Screens/OnboardingCard.dart';
+import 'package:flutter_unity_app/Screens/Onboarding/OnboardingCard.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class Onboarding extends StatefulWidget {
