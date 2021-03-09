@@ -1,12 +1,24 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_unity_app/Components/DateInput.dart';
 import 'package:flutter_unity_app/Components/Input.dart';
 import 'package:flutter_unity_app/Components/InputWithLabel.dart';
 
 // ignore: must_be_immutable
-class SignUpWithEmail extends StatelessWidget {
+class SignUpWithEmail extends StatefulWidget {
+  @override
+  _SignUpWithEmailState createState() => _SignUpWithEmailState();
+}
+
+class _SignUpWithEmailState extends State<SignUpWithEmail> {
   String name = "";
+
   String email = "";
+
   String password = "";
+
+  String dob;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +81,14 @@ class SignUpWithEmail extends StatelessWidget {
                       label: "Set a Password",
                       hint: "Password",
                       type: INPUT_TYPE.PASSWORD,
-                      setText: (text) => password = text)
+                      setText: (text) => password = text),
+                  Container(
+                    child: DateInput(
+                      setDOB: (dob) {
+                        this.dob = dob;
+                      },
+                    ),
+                  )
                 ],
               ),
             )
