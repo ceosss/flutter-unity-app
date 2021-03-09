@@ -53,17 +53,20 @@ class SignUpOptions extends StatelessWidget {
                       text: "Sign Up with Google",
                       icon: FontAwesomeIcons.google,
                       color: Colors.white,
+                      textColor: Colors.black,
                       onPress: () {
                         print("Sign Up with Google Pressed");
                       },
                     ),
                     Button(
-                        text: "Sign Up with Apple",
-                        icon: FontAwesomeIcons.apple,
-                        onPress: () {
-                          print("Sign up with Apple pressed");
-                        },
-                        color: Colors.black),
+                      text: "Sign Up with Apple",
+                      icon: FontAwesomeIcons.apple,
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      onPress: () {
+                        print("Sign up with Apple pressed");
+                      },
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(15),
                       child: Text(
@@ -72,12 +75,14 @@ class SignUpOptions extends StatelessWidget {
                       ),
                     ),
                     Button(
-                        text: "Sign Up with Email",
-                        icon: FontAwesomeIcons.envelope,
-                        onPress: () {
-                          print("Sign up with Email pressed");
-                        },
-                        color: Color(0xff14D3C1)),
+                      text: "Sign Up with Email",
+                      icon: FontAwesomeIcons.envelope,
+                      color: Color(0xff14D3C1),
+                      textColor: Colors.white,
+                      onPress: () {
+                        print("Sign up with Email pressed");
+                      },
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(15),
                       child: Row(

@@ -5,14 +5,13 @@ class Button extends StatelessWidget {
   final IconData icon;
   final Function onPress;
   final Color color;
+  final Color textColor;
   Button(
       {@required this.text,
       @required this.icon,
       @required this.onPress,
-      @required this.color});
-
-  Color getPerfectColor() =>
-      color == Colors.black ? Colors.white : Colors.black;
+      @required this.color,
+      @required this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class Button extends StatelessWidget {
           children: [
             Icon(
               icon,
-              color: getPerfectColor(),
+              color: textColor,
               size: 30,
             ),
             Expanded(
@@ -39,9 +38,7 @@ class Button extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: getPerfectColor()),
+                  fontSize: 22, fontWeight: FontWeight.bold, color: textColor),
             ))
           ],
         ),
