@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_app/Components/Input.dart';
+import 'package:flutter_unity_app/Components/InputWithLabel.dart';
 
 // ignore: must_be_immutable
 class SignUpWithEmail extends StatelessWidget {
@@ -52,17 +53,9 @@ class SignUpWithEmail extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "What's your name?",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  Input(
-                    hint: "Name",
-                    setText: (text) {
-                      name = text;
-                    },
-                  ),
+                  InputWithLabel(setText: (text) {
+                    name = text;
+                  })
                 ],
               ),
             )
