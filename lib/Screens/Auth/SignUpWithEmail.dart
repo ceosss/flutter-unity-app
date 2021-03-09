@@ -114,9 +114,10 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                           child: Text(
                             "Sign In",
                             style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xff14D3C1),
-                                decoration: TextDecoration.underline),
+                              fontSize: 14,
+                              color: Color(0xff14D3C1),
+                              decoration: TextDecoration.underline,
+                            ),
                           ),
                         )
                       ],

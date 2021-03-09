@@ -6,12 +6,14 @@ class Button extends StatelessWidget {
   final Function onPress;
   final Color color;
   final Color textColor;
+  final Color shadowColor;
   Button({
     @required this.text,
-    this.icon,
     @required this.onPress,
     @required this.color,
     @required this.textColor,
+    this.icon,
+    this.shadowColor,
   });
 
   @override
@@ -22,7 +24,8 @@ class Button extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
-            color: Color(0xff9D13E4),
+            color: shadowColor != null ? shadowColor : Color(0xff9D13E4),
+            // Color(0xff9D13E4),
             blurRadius: 10,
           ),
         ],

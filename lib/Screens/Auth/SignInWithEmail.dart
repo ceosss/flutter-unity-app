@@ -5,6 +5,8 @@ import 'package:flutter_unity_app/Components/InputWithLabel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignInWithEmail extends StatelessWidget {
+  String email = "";
+  String password = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,9 +37,10 @@ class SignInWithEmail extends StatelessWidget {
             Text(
               "Sign In",
               style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32),
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 32,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
@@ -56,18 +59,23 @@ class SignInWithEmail extends StatelessWidget {
                   InputWithLabel(
                     label: "Email",
                     hint: "Email",
-                    setText: () {},
+                    setText: (text) {
+                      email = text;
+                    },
                     type: INPUT_TYPE.EMAIL,
                   ),
                   InputWithLabel(
                     label: "Password",
                     hint: "Password",
-                    setText: () {},
+                    setText: (text) {
+                      password = text;
+                    },
                     type: INPUT_TYPE.PASSWORD,
                   ),
                   Button(
                     text: "Sign In",
                     onPress: () {},
+                    shadowColor: Colors.white,
                     color: Color(0xffC3C3C3),
                     textColor: Colors.white,
                   ),
@@ -87,6 +95,7 @@ class SignInWithEmail extends StatelessWidget {
                           icon: FontAwesomeIcons.google,
                           color: Colors.white,
                           textColor: Colors.black,
+                          shadowColor: Colors.white,
                           onPress: () {
                             print("Sign Up with Google Pressed");
                           },
@@ -96,6 +105,7 @@ class SignInWithEmail extends StatelessWidget {
                           icon: FontAwesomeIcons.apple,
                           color: Colors.black,
                           textColor: Colors.white,
+                          shadowColor: Colors.white,
                           onPress: () {
                             print("Sign up with Apple pressed");
                           },
