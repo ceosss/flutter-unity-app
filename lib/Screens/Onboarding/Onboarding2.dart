@@ -32,7 +32,10 @@ class _OnboardingState extends State<Onboarding> {
           context: context,
         )
       ],
-      onDone: () => print("ON-DONE"),
+      onDone: () {
+        Navigator.of(context)
+            .pushNamedAndRemoveUntil("signup_options", (route) => false);
+      },
       done: Text(
         "DONE",
         style: TextStyle(color: Colors.white),
