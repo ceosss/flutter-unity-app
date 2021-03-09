@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: 'signup_with_email',
+      initialRoute: 'onboarding',
       routes: {
         'onboarding': (context) => Onboarding(),
         'signup_options': (context) => SignUpOptions(),

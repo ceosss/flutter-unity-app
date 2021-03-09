@@ -66,7 +66,7 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
               width: double.infinity,
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   InputWithLabel(
                       label: "What's your name?",
@@ -95,6 +95,32 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                     onPress: () {},
                     color: Color(0xff14D3C1),
                     textColor: Colors.white,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Already have an account?",
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            print("Sign in pressed");
+                            Navigator.pushNamed(context, "signup_options");
+                          },
+                          child: Text(
+                            "Sign In",
+                            style: TextStyle(
+                                fontSize: 14,
+                                color: Color(0xff14D3C1),
+                                decoration: TextDecoration.underline),
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

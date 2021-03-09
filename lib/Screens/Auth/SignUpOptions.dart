@@ -86,23 +86,24 @@ class SignUpOptions extends StatelessWidget {
                         children: [
                           Text(
                             "Already have an account?",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            style: TextStyle(color: Colors.white, fontSize: 14),
                           ),
                           TextButton(
                             onPressed: () {
                               print("Sign in pressed");
+                              Navigator.pushNamed(context, "signup_with_email");
                             },
                             child: Text(
                               "Sign In",
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 14,
                                   color: Color(0xff14D3C1),
                                   decoration: TextDecoration.underline),
                             ),
                           )
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               )
