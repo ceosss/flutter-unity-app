@@ -15,7 +15,7 @@ class App extends StatelessWidget {
         'onboarding': (context) => Onboarding(),
         'signup_options': (context) => SignUpOptions(),
         'signup_with_email': (context) => SignUpWithEmail(),
-        'signin': (context) => SignInWithEmail(),
+        'signin_with_email': (context) => SignInWithEmail(),
       },
     );
   }

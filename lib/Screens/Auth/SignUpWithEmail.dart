@@ -109,7 +109,7 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                         TextButton(
                           onPressed: () {
                             print("Sign in pressed");
-                            Navigator.pushNamed(context, "signup_options");
+                            Navigator.pushNamed(context, "signin_with_email");
                           },
                           child: Text(
                             "Sign In",
