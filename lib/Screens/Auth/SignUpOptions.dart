@@ -9,19 +9,13 @@ class SignUpOptions extends StatelessWidget {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                stops: [
-              0,
-              0.45,
-              1
-            ],
-                colors: [
-              Color(0xff6602FF),
-              Color(0xff6E03FB),
-              Color(0xff9E13E4)
-            ])),
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            stops: [0, 0.45, 1],
+            colors: [Color(0xff6602FF), Color(0xff6E03FB), Color(0xff9E13E4)],
+          ),
+        ),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +34,7 @@ class SignUpOptions extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Text(
-                  "Join the world of\n immersive experience",
+                  "Join the world of\n immersive experience.",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
@@ -81,6 +75,7 @@ class SignUpOptions extends StatelessWidget {
                       textColor: Colors.white,
                       onPress: () {
                         print("Sign up with Email pressed");
+                        Navigator.pushNamed(context, "signup_with_email");
                       },
                     ),
                     Padding(
