@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 enum INPUT_TYPE { EMAIL, PASSWORD, DATE, OTHER }
 
+// ignore: must_be_immutable
 class Input extends StatelessWidget {
   final String hint;
   final Function setText;

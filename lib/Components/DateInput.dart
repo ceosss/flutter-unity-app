@@ -4,6 +4,7 @@ import 'package:flutter_unity_app/Components/Input.dart';
 import 'package:flutter_unity_app/Components/InputWithLabel.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class DateInput extends StatefulWidget {
   DateTime date = DateTime.now();
   String dob = DateTime.now().toString();

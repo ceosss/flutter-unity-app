@@ -40,7 +40,7 @@ class SignUpOptions extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 70),
+                margin: EdgeInsets.symmetric(horizontal: 40, vertical: 70),
                 child: Column(
                   children: [
                     Button(

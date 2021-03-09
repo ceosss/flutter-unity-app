@@ -17,14 +17,16 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(15), boxShadow: [
-        BoxShadow(
-          color: Color(0xff9D13E4),
-          blurRadius: 10,
-        ),
-      ]),
+      margin: EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0xff9D13E4),
+            blurRadius: 10,
+          ),
+        ],
+      ),
       child: MaterialButton(
         onPressed: onPress,
         child: Row(
