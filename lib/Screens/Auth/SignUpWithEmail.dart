@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_unity_app/Components/Button.dart';
 import 'package:flutter_unity_app/Components/DateInput.dart';
 import 'package:flutter_unity_app/Components/Input.dart';
 import 'package:flutter_unity_app/Components/InputWithLabel.dart';
@@ -88,6 +89,12 @@ class _SignUpWithEmailState extends State<SignUpWithEmail> {
                         this.dob = dob;
                       },
                     ),
+                  ),
+                  Button(
+                    text: "Sign Up",
+                    onPress: () {},
+                    color: Color(0xff14D3C1),
+                    textColor: Colors.white,
                   )
                 ],
               ),

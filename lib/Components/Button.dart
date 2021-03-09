@@ -6,12 +6,13 @@ class Button extends StatelessWidget {
   final Function onPress;
   final Color color;
   final Color textColor;
-  Button(
-      {@required this.text,
-      @required this.icon,
-      @required this.onPress,
-      @required this.color,
-      @required this.textColor});
+  Button({
+    @required this.text,
+    this.icon,
+    @required this.onPress,
+    @required this.color,
+    @required this.textColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +29,13 @@ class Button extends StatelessWidget {
         onPressed: onPress,
         child: Row(
           children: [
-            Icon(
-              icon,
-              color: textColor,
-              size: 30,
-            ),
+            this.icon != null
+                ? Icon(
+                    icon,
+                    color: textColor,
+                    size: 30,
+                  )
+                : Text(""),
             Expanded(
                 child: Text(
               text,
