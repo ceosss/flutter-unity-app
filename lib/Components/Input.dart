@@ -9,6 +9,7 @@ class Input extends StatelessWidget {
     return Container(
         padding: EdgeInsets.symmetric(vertical: 5),
         child: TextField(
+          keyboardType: TextInputType.emailAddress,
           onChanged: (text) => setText(text),
           decoration: InputDecoration(
             hintText: hint,

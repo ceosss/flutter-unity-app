@@ -5,6 +5,8 @@ import 'package:flutter_unity_app/Components/InputWithLabel.dart';
 // ignore: must_be_immutable
 class SignUpWithEmail extends StatelessWidget {
   String name = "";
+  String email = "";
+  String password = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,9 +55,18 @@ class SignUpWithEmail extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InputWithLabel(setText: (text) {
-                    name = text;
-                  })
+                  InputWithLabel(
+                      label: "What's your name?",
+                      hint: "Name",
+                      setText: (text) => name = text),
+                  InputWithLabel(
+                      label: "Email",
+                      hint: "xyz@example.com",
+                      setText: (text) => email = text),
+                  InputWithLabel(
+                      label: "Set a Password",
+                      hint: "Password",
+                      setText: (text) => password = text)
                 ],
               ),
             )
