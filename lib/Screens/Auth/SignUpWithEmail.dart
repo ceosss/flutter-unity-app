@@ -58,14 +58,17 @@ class SignUpWithEmail extends StatelessWidget {
                   InputWithLabel(
                       label: "What's your name?",
                       hint: "Name",
+                      type: INPUT_TYPE.OTHER,
                       setText: (text) => name = text),
                   InputWithLabel(
                       label: "Email",
                       hint: "xyz@example.com",
+                      type: INPUT_TYPE.EMAIL,
                       setText: (text) => email = text),
                   InputWithLabel(
                       label: "Set a Password",
                       hint: "Password",
+                      type: INPUT_TYPE.PASSWORD,
                       setText: (text) => password = text)
                 ],
               ),
