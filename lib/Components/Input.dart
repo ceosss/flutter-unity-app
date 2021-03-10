@@ -10,15 +10,16 @@ class Input extends StatelessWidget {
   final bool enabled;
   final String text;
   final Widget icon;
+  final Color backgroundColor;
   var textController = new TextEditingController();
-  Input({
-    @required this.hint,
-    @required this.setText,
-    @required this.type,
-    this.enabled,
-    this.icon,
-    this.text,
-  });
+  Input(
+      {@required this.hint,
+      @required this.setText,
+      @required this.type,
+      this.enabled,
+      this.icon,
+      this.text,
+      this.backgroundColor});
   TextEditingController getText() {
     textController.text = (type == INPUT_TYPE.DATE ? text : null);
     return textController;
@@ -39,7 +40,7 @@ class Input extends StatelessWidget {
           decoration: InputDecoration(
             suffixIcon: icon ?? icon,
             hintText: hint,
-            fillColor: Colors.white,
+            fillColor: backgroundColor != null ? backgroundColor : Colors.white,
             filled: true,
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
