@@ -81,9 +81,14 @@ class SignInWithEmail extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: Text(
-                      "Forgot my Password",
-                      style: TextStyle(color: Colors.white, fontSize: 14),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "forgot_password");
+                      },
+                      child: Text(
+                        "Forgot my Password",
+                        style: TextStyle(color: Colors.white, fontSize: 14),
+                      ),
                     ),
                   ),
                   Container(
